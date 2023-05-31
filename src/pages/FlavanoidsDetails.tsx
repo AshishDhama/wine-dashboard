@@ -6,7 +6,7 @@ import { AlcoholCompostion } from '../types/alcohol-compostion';
 
 
 function FlavanoidsDetails(): JSX.Element  {
-    const config = [
+    const config = [  
         {
           label: 'Measure',
           render: (v: Record<string, string| number>) => v.name,
@@ -50,8 +50,8 @@ function FlavanoidsDetails(): JSX.Element  {
 
   return (
     <div>
-      <Table data={tableData} config={config} keyFn={keyFn} />
-      <Table data={gammaTableData} config={config} keyFn={keyFn} />
+      <Table title='Flavanoids Stats' data={tableData} config={config} keyFn={keyFn} />
+      <Table title='Gamma Stats' data={gammaTableData} config={config} keyFn={keyFn} />
     </div>
   );
 }

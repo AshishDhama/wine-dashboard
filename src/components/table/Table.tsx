@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react';
 
+import './table.css'
+
 export type TableData = Record<string, string| number>;
 
 export type  TableConfig = {
@@ -11,12 +13,13 @@ export type  TableConfig = {
 
 
 type Props = {
+  title: string;
   data: TableData[];
   config: TableConfig;
   keyFn: (value: TableData) =>  string | number;
 }
 
-export function Table({ data, config, keyFn }: Props): JSX.Element {
+export function Table({ data, title, config, keyFn }: Props): JSX.Element {
   const renderedHeaders = config.map((column) => {
     if (column.header) {
       return <Fragment key={column.label}>{column.header()}</Fragment>;
@@ -42,11 +45,14 @@ export function Table({ data, config, keyFn }: Props): JSX.Element {
   });
 
   return (
+    <>
     <table className="table-auto border-spacing-2">
+    <caption>{title}</caption>
       <thead>
         <tr className="border-b-2">{renderedHeaders}</tr>
       </thead>
       <tbody>{renderedRows}</tbody>
     </table>
+    </>
   );
 }
