@@ -7,4 +7,28 @@
 body {
   font-family: 'Nunito', sans-serif;
   color: #384047;
+
+}
+.title{
+  font-family: 'Times New Roman', Times, serif;
+  color: #fff;
+  font-size: 48px;
+}
+
+.main{
+  padding: 20px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  background:
+  linear-gradient(45deg,
+    rgba(245,70,66, 0.75),
+    rgba(8,83,156, 0.75)), url('./assets/bg.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }

@@ -1,3 +1,5 @@
+<img width="1792" alt="Screenshot 2023-06-01 at 2 49 08 AM" src="https://github.com/AshishDhama/wine-dashboard/assets/16203333/cf6a99d1-077c-484b-aea1-5d426a35f5db">
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

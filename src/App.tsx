@@ -6,7 +6,8 @@ import './App.css';
 
 function App(): JSX.Element {
   return (
-    <div className="App">
+    <div className="main">
+      <h1 className='title'>Wine Testing Stats</h1>
       <FlavanoidsDetails/>
     </div>
   );

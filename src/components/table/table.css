@@ -1,7 +1,19 @@
-
+.table-wrapper{
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 960px;
+  border: 1px solid #722F37;
+}
 table {
-    max-width: 960px;
-    margin: 10px auto;
+  table-layout: auto;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 2px;
+    background: #ffffff;
   }
   
   caption {
@@ -11,25 +23,31 @@ table {
   }
   
   thead th {
-    font-weight: 400;
-    background: #c3e737;
-    color: #000000;
+    font-weight: 600;
+    background: #722F37;
+    color: #ffffff;
   }
   
   tr {
     background: #f4f7f8;
-    border-bottom: 1px solid #FFF;
-    margin-bottom: 5px;
+    display: flex;
+    width: 100%;
   }
   
   tr:nth-child(even) {
     background: #e8eeef;
   }
+
+  tr:hover{
+    background: #e6f3f7;
+  }
   
   th, td {
     text-align: left;
     padding: 20px;
-    font-weight: 300;
+    font-weight: 400;
+    display: flex;
+    width: 100%;
   }
   
   tfoot tr {

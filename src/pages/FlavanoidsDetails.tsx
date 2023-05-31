@@ -49,10 +49,10 @@ function FlavanoidsDetails(): JSX.Element  {
   const keyFn = (v: typeof tableData[0]) => v.name;
 
   return (
-    <div>
+    <>
       <Table title='Flavanoids Stats' data={tableData} config={config} keyFn={keyFn} />
       <Table title='Gamma Stats' data={gammaTableData} config={config} keyFn={keyFn} />
-    </div>
+    </>
   );
 }
 
