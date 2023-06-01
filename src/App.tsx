@@ -3,12 +3,11 @@ import FlavanoidsDetails from './pages/FlavanoidsDetails';
 
 import './App.css';
 
-
 function App(): JSX.Element {
   return (
     <div className="main">
-      <h1 className='title'>Wine Testing Stats</h1>
-      <FlavanoidsDetails/>
+      <h1 className="title">Wine Testing Stats</h1>
+      <FlavanoidsDetails />
     </div>
   );
 }

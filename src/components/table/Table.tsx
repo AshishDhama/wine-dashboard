@@ -1,23 +1,22 @@
 import React, { Fragment } from 'react';
 
-import './table.css'
+import './table.css';
 
-export type TableData = Record<string, string| number>;
+export type TableData = Record<string, string | number>;
 
-export type  TableConfig = {
-    header?:() => string;
-    label: string,
-    render: (value: TableData) =>  string | number,
-    sortValue?: (value: TableData) => string,
-  }[];
-
+export type TableConfig = {
+  header?: () => string;
+  label: string;
+  render: (value: TableData) => string | number;
+  sortValue?: (value: TableData) => string;
+}[];
 
 type Props = {
   title: string;
   data: TableData[];
   config: TableConfig;
-  keyFn: (value: TableData) =>  string | number;
-}
+  keyFn: (value: TableData) => string | number;
+};
 
 export function Table({ data, title, config, keyFn }: Props): JSX.Element {
   const renderedHeaders = config.map((column) => {
@@ -30,29 +29,21 @@ export function Table({ data, title, config, keyFn }: Props): JSX.Element {
 
   const renderedRows = data.map((rowData) => {
     const renderedCells = config.map((column) => {
-      return (
-        <td key={column.label}>
-          {column.render(rowData)}
-        </td>
-      );
+      return <td key={column.label}>{column.render(rowData)}</td>;
     });
 
-    return (
-      <tr key={keyFn(rowData)}>
-        {renderedCells}
-      </tr>
-    );
+    return <tr key={keyFn(rowData)}>{renderedCells}</tr>;
   });
 
   return (
-    <div className='table-wrapper'>
-    <table>
-    <caption>{title}</caption>
-      <thead>
-        <tr>{renderedHeaders}</tr>
-      </thead>
-      <tbody>{renderedRows}</tbody>
-    </table>
+    <div className="table-wrapper">
+      <table>
+        <caption>{title}</caption>
+        <thead>
+          <tr>{renderedHeaders}</tr>
+        </thead>
+        <tbody>{renderedRows}</tbody>
+      </table>
     </div>
   );
 }
