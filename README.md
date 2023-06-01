@@ -1,5 +1,6 @@
 ## Live Demo: https://glittering-stardust-d10683.netlify.app/
-<img width="1792" alt="Screenshot 2023-06-01 at 2 49 08 AM" src="https://github.com/AshishDhama/wine-dashboard/assets/16203333/cf6a99d1-077c-484b-aea1-5d426a35f5db">
+<img width="968" alt="Screenshot 2023-06-01 at 11 53 59 AM" src="https://github.com/AshishDhama/wine-dashboard/assets/16203333/a3cf2555-f4fe-4da4-ae5f-d65ac7c7f502">
+<img width="975" alt="Screenshot 2023-06-01 at 11 53 53 AM" src="https://github.com/AshishDhama/wine-dashboard/assets/16203333/9d098e37-c7d4-4f8d-9093-b9405f117d7f">
 
 ## Getting Started with Create React App
 

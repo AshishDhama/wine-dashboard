@@ -18,8 +18,7 @@ export function getMode(numbers: number[]): number[] {
 
   Object.keys(count).forEach((value) => {
     const number = +value;
-    // if all the values have frequency of 1 in that case mode can't be determined
-    if (count[number] && count[number] === maxIndex && maxIndex > 1) {
+    if (count[number] && count[number] === maxIndex) {
       const mode = +number.toFixed(3);
       modes.push(mode);
     }
@@ -83,11 +82,11 @@ export function getTransformedData(dataGroup: WineTestRecord) {
     flavnoidsMeanData[key] = getMean(flavnoids);
     flavnoidsMedianData[key] = getMedian(flavnoids);
     const flavnoidsMode = getMode(flavnoids);
-    flavnoidsModeData[key] = flavnoidsMode.join(', ') || 'All values are distinct';
+    flavnoidsModeData[key] = flavnoidsMode.join(', ');
     gammamMeanData[key] = getMean(gamma);
     gammaMedianData[key] = getMedian(gamma);
     const gammaMode = getMode(gamma);
-    gammaModeData[key] = gammaMode.join(', ') || 'All values are distinct';
+    gammaModeData[key] = gammaMode.join(', ');
   });
   return {
     flavnoidsTableData: [flavnoidsMeanData, flavnoidsMedianData, flavnoidsModeData],
