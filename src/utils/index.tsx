@@ -18,6 +18,7 @@ export function getMode(numbers: number[]): number[] {
 
   Object.keys(count).forEach((value) => {
     const number = +value;
+    // if all the values have frequency of 1 in that case mode can't be determined
     if (count[number] && count[number] === maxIndex && maxIndex > 1) {
       const mode = +number.toFixed(3);
       modes.push(mode);
